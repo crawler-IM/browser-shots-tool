@@ -254,10 +254,6 @@ def main():
  marcalize_it() 
 
 
-"""
-def main ():
- marcalize_it()
-"""
 
 if __name__ == "__main__":
     main()
