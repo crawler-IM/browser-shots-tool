@@ -22,13 +22,13 @@ The deployment and installation of the browser-shots tool is strongly dependent 
 
 In order to make all the tools running together, in a suitable environment, the following applications/packages need to be installed :
 
-1.1. Selenium driver for the browsers : provided by Selenium in the Python Client on its official website (for example, the driver for Firefox is used in this project)
+  **1.1.** Selenium driver for the browsers : provided by Selenium in the Python Client on its official website (for example, the driver for Firefox is used in this project)
 Reference : http://pypi.python.org/pypi/selenium
 
-1.2. If the Graphical User Interface (GUI) is not available in your system, you can use an X server (for example, we used Xvfb v 11)
+  **1.2.** If the Graphical User Interface (GUI) is not available in your system, you can use an X server (for example, we used Xvfb v 11)
 Packages to be installed: xvfb, xfonts-base, xfonts-75dpi, xfonts-100dpi, libgl1-mesa-dri, xfonts-scalable, xfonts-cyrillic, gnome-icon-theme-symbolic
 
-1.3. Python: we can check the installed version by typing the command line:
+  **1.3.** Python: we can check the installed version by typing the command line:
     $ python
 
 
@@ -52,7 +52,7 @@ If the GUI is not installed in your system, you have to launch all the nodes of 
     $ Xvfb :1 -screen 0 1024x768x24 &
     $ DISPLAY=:1 java -jar selenium-server-standalone-2.24.1.jar -role node -port 5555 -hub http://machine-hub.com:8089/grid/register -maxSession 10 -browser browserName=firefox,maxInstances=10 -host http://machine-node.com/
 
-**2.2 Firefox**  
+**2.2. Firefox**  
 In order to use Firefox, one option is to create a symbolic link to Firefox and then run the firefox command :
 
     $ firefox http://google.com
@@ -63,7 +63,7 @@ If this is the case, you need to run the Xserver first :
     $ Xvfb :1 -screen 0 1024x768x24 &
     $ DISPLAY=:1 firefox http://google.com
 
-**2.3 MarcAlizer**  
+**2.3. MarcAlizer**  
 The MarcAlizer application (jar file + auxiliary sub-folders and libraries) needs to be extracted from the downloaded package.  
 Reference : http://wiki.opf-labs.org/display/TR/Pagelyzer
 
