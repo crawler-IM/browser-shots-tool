@@ -11,7 +11,6 @@ import getopt
 
 def usage():
  print '\n*********************************\n'
- print 'You have to put the jar of marcalizer in a subfolder called "marcalizer" and this script in the same folder. \n'
  print 'The script should be runned with only one option. To run it :\n    python remarcalize-it.py -f filePath \n'
  print '    python remarcalize-it.py -d directoryPath \n'
  print '*********************************\n'
