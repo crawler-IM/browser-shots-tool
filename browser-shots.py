@@ -11,8 +11,8 @@ import getopt
 
 def usage():
  print '\n*********************************\n'
- print 'The script should be runned with only one option. To run it :\n    python remarcalize-it.py -f filePath \n'
- print '    python remarcalize-it.py -d directoryPath \n'
+ print 'The script should be runned with only one option. To run it :\n    python browser-shots.py -f filePath \n'
+ print '    python browser-shots.py -d directoryPath \n'
  print '*********************************\n'
 
 def clean_it():
