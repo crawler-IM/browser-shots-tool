@@ -4,11 +4,9 @@ The browser-shots tool is developed by Internet Memory in the context of SCAPE p
 
 The detection of the rendering issues is done in the following three steps :
 
-  1° Web pages screenshots automatically taken using Selenium framework, for different browser versions.
-
-  2° Visual comparison between pairs of screenshots using MarcAlizer tool (recently replaced by PageAlizer tool, to include also the structural comparison).
-
-  3° Automatically detect the rendering issues in the Web pages, based on the comparison results.
+  - Web pages screenshots automatically taken using Selenium framework, for different browser versions.
+  - Visual comparison between pairs of screenshots using MarcAlizer tool (recently replaced by PageAlizer tool, to include also the structural comparison).
+  - Automatically detect the rendering issues in the Web pages, based on the comparison results.
 
 
 The browser-shots tool is developed as a wrapper application, to orchestrate the main building blocks (Selenium instances and MarcAlizer comparators) and to perform large scale experiments on archived Web content. It is implemented in Python, on a Debian Squeeze (64 bits) platform.
