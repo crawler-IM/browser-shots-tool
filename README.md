@@ -14,7 +14,8 @@ The browser-shots tool is developed as a wrapper application, to orchestrate the
 The browser versions currently experienced and tested are: Firefox (for all the available releases), Chrome (only for the last version), Opera (for the official 11th and 12th versions) and Internet Explorer (still to be fixed).
 
 
-Getting Started:
+###Getting Started :
+
 The deployment and installation of the browser-shots tool is strongly dependent on different other packages, since it uses "off-the-shelf" components that need to be already available on your system, such as:
  - Python 2.6 or higher
  - Selenium 2.24.1
@@ -33,8 +34,9 @@ Packages to be installed: xvfb, xfonts-base, xfonts-75dpi, xfonts-100dpi, libgl1
     $ python
 
 
-Testing and running the main building blocks:
-1° Selenium
+###Testing and running the main building blocks :
+
+**1° Selenium**
 The Selenium framework can be used in two different cases: the first one is to run it on the local machine and the second one is to run Selenium as a server and several nodes in a distributed solution. The nodes will be called remotely by the server.
 To explore all options in the jar file type :
 
@@ -52,7 +54,7 @@ If the GUI is not installed in your system, you have to launch all the nodes of 
     $ Xvfb :1 -screen 0 1024x768x24 &
     $ DISPLAY=:1 java -jar selenium-server-standalone-2.24.1.jar -role node -port 5555 -hub http://machine-hub.com:8089/grid/register -maxSession 10 -browser browserName=firefox,maxInstances=10 -host http://machine-node.com/
 
-2° Firefox
+**2° Firefox**
 In order to use Firefox, one option is to create a symbolic link to Firefox and then run the firefox command :
 
     $ firefox http://google.com
@@ -63,7 +65,7 @@ If this is the case, you need to run the Xserver first :
     $ Xvfb :1 -screen 0 1024x768x24 &
     $ DISPLAY=:1 firefox http://google.com
 
-3° MarcAlizer
+**3° MarcAlizer**
 The MarcAlizer application (jar file + auxiliary sub-folders and libraries) needs to be extracted from the downloaded package.
 Reference : http://wiki.opf-labs.org/display/TR/Pagelyzer
 
