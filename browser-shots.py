@@ -16,8 +16,18 @@ def usage():
  print '*********************************\n'
 
 def clean_it():
- to_be_removed = ['./marcalizer/out/bow/top/sift/100/1/', './marcalizer/out/bow/top/sift/200/1/', 
-  		'./marcalizer/out/sift/top/1/', './marcalizer/out/images/1/', './marcalizer/in/images/1/']
+ to_be_removed = []
+ if os.path.isdir('./marcalizer/out/bow/top/sift/100/1/'):
+  to_be_removed.append('./marcalizer/out/bow/top/sift/100/1/')
+ if os.path.isdir('./marcalizer/out/bow/top/sift/200/1/'):
+  to_be_removed.append('./marcalizer/out/bow/top/sift/200/1/')
+ if os.path.isdir('./marcalizer/out/sift/top/1/'):
+  to_be_removed.append('./marcalizer/out/sift/top/1/')
+ if os.path.isdir('./marcalizer/out/images/1/'):
+  to_be_removed.append('./marcalizer/out/images/1/')
+ if os.path.isdir('./marcalizer/in/images/1/'):
+  to_be_removed.append('./marcalizer/in/images/1/')
+ 
  for r in to_be_removed:
   for f in os.listdir(r):
    os.remove(r + f)
