@@ -181,14 +181,17 @@ def main():
     print ('is not a file')
   elif o in ('-d', '--directory'):
    ts = date('%Y-%m-%d-%H:%M:%S')
-   if os.path.isdir(a):
+   dir = a 
+   if dir[-1] != '/':
+    dir = dir + '/'
+   if os.path.isdir(dir):
     print 'is a dir'
-    listing = os.listdir(a)
+    listing = os.listdir(dir)
     n = len(listing)
     print '~~~ ' + str(n) + ' ~~~'
     if (n <= 0):
      print 'capture in localhost'
-     p = Process(target=take_5_snapshots(node0, listing, a), args=())
+     p = Process(target=take_5_snapshots(node0, listing, dir), args=())
      p.start()
     if (n > 0):
      print 'capture in other nodes' 
@@ -198,15 +201,15 @@ def main():
       print '\n' 
       if iteration == 0 :
        print 'node0 = ' + str(l)
-       p0 = Process(target=take_5_snapshots, args=(node0, opera0, l, a,))
+       p0 = Process(target=take_5_snapshots, args=(node0, opera0, l, dir,))
        p0.start()
       if iteration == 1 :
        print 'node1 = ' + str(l)
-       p1 = Process(target=take_5_snapshots, args=(node1, opera1, l, a,))
+       p1 = Process(target=take_5_snapshots, args=(node1, opera1, l, dir,))
        p1.start()
       if iteration == 2 :
        print 'node2 = ' + str(l)
-       p2 = Process(target=take_5_snapshots, args=(node2, opera2, l, a,))
+       p2 = Process(target=take_5_snapshots, args=(node2, opera2, l, dir,))
        p2.start()
       iteration += 1
    else:
