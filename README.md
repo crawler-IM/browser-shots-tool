@@ -9,7 +9,13 @@ The detection of the rendering issues is done in the following three steps :
 
 
 The browser-shots tool is developed as a wrapper application, to orchestrate the main building blocks (Selenium instances and MarcAlizer comparators) and to perform large scale experiments on archived Web content. It is implemented in Python, on a Debian Squeeze (64 bits) platform.  
-The browser versions currently experienced and tested are: Firefox (for all the available releases), Chrome (only for the last version), Opera (for the official 11th and 12th versions) and Internet Explorer (still to be fixed).
+The browser versions currently experienced and tested are: Firefox (for all the available releases), Chrome (only for the last version), Opera (for the official 11th and 12th versions) and Internet Explorer (still to be fixed).  
+The script doesn't need any installation, just change the address of the Selenium nodes hard coded in the main function, and then run it using the command line with the options :  
+
+    $ python browser-shots.py -d ./demo  
+
+In the directory "demo" we put text files, in each one a pair of URL.  
+In this version of the script we will test the differeces between browsers while displaying the same page. So under "demo", in each file text we put the same URL in two lines because by default it takes a pair.  
 
 
 ###1. Getting Started :
