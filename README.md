@@ -68,8 +68,8 @@ The MarcAlizer application (jar file + auxiliary sub-folders and libraries) need
 Reference : http://wiki.opf-labs.org/display/TR/Pagelyzer
 
 The Marcalizer needed in the script browser-shot.py is not only the jar, but it contains also other tools : 
- Download it from : https://github.com/openplanets/pagelyzer , we need only the directory "marcalizer" (containing in, out and marcalizer.jar)  
- Place it in the same directory as the browser-shot.py script. You should have this structure : ./browser-shot.py ./marcalizer ./marcalizer/in ./marcalizer/out ./marcalizer/marcalizer.jar  
+ - Download it from : https://github.com/openplanets/pagelyzer , we need only the directory "marcalizer" (containing in, out and marcalizer.jar)  
+ - Place it in the same directory as the browser-shot.py script. You should have this structure : ./browser-shot.py ./marcalizer ./marcalizer/in ./marcalizer/out ./marcalizer/marcalizer.jar  
 
 In order to test if MarcAlizer runs correctly, one can use the following command line :
 
