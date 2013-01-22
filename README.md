@@ -67,6 +67,10 @@ If this is the case, you need to run the Xserver first :
 The MarcAlizer application (jar file + auxiliary sub-folders and libraries) needs to be extracted from the downloaded package.  
 Reference : http://wiki.opf-labs.org/display/TR/Pagelyzer
 
+The Marcalizer needed in the script browser-shot.py is not only the jar, but it contains also other tools : 
+ Download it from : https://github.com/openplanets/pagelyzer , we need only the directory "marcalizer" (containing in, out and marcalizer.jar)  
+ Place it in the same directory as the browser-shot.py script. You should have this structure : ./browser-shot.py ./marcalizer ./marcalizer/in ./marcalizer/out ./marcalizer/marcalizer.jar  
+
 In order to test if MarcAlizer runs correctly, one can use the following command line :
 
     $ java -jar marcalizer.jar -snapshot1 ./in/images/1/pic1.png -snapshot2 ./in/images/1/pic2.png
